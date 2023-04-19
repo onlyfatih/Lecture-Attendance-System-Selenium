@@ -28,54 +28,54 @@ Jenkins Entegrasyonu
     Açılan sayfada "item name" alanına "MyJavaPipeline" yazın ve "Pipeline" seçeneğini seçin, ardından "OK" butonuna tıklayın.
     Açılan sayfada "Pipeline" bölümünü bulun ve "Definition" seçeneğini "Pipeline script" olarak ayarlayın.
     "Script" bölümüne aşağıdaki scripti yapıştırın:
-    
-    *************************************************************************************
-    pipeline {
-    agent any
-    triggers {
-        cron('00 17 * * 3')
-    }
-    stages {
-        stage('Checkout') {
-            steps {
-                git branch: 'main', url: 'https://github.com/onlyfatih/DersTakipSistemiTestOtomasyonu.git'
-            }
-        }
-        stage('Build and Test') {
-            steps {
-                sh 'mvn clean test -Dtest=AlgoritmaAnaliziLoginTests'
-            }
-        }
-    }
-}
 
-pipeline {
-    agent any
-    triggers {
-        cron('00 15 * * 4')
-    }
-    stages {
-        stage('Checkout') {
-            steps {
-                git branch: 'main', url: 'https://github.com/onlyfatih/DersTakipSistemiTestOtomasyonu.git'
+        *************************************************************************************
+        pipeline {
+        agent any
+        triggers {
+            cron('00 17 * * 3')
+        }
+        stages {
+            stage('Checkout') {
+                steps {
+                    git branch: 'main', url: 'https://github.com/onlyfatih/DersTakipSistemiTestOtomasyonu.git'
+                }
+            }
+            stage('Build and Test') {
+                steps {
+                    sh 'mvn clean test -Dtest=AlgoritmaAnaliziLoginTests'
+                }
             }
         }
-        stage('Build and Test') {
-            steps {
-                sh 'mvn clean test -Dtest=ParalelProgramlamaLoginTests'
+        }
+
+        pipeline {
+            agent any
+            triggers {
+                cron('00 15 * * 4')
+            }
+            stages {
+                stage('Checkout') {
+                    steps {
+                        git branch: 'main', url: 'https://github.com/onlyfatih/DersTakipSistemiTestOtomasyonu.git'
+                    }
+                }
+                stage('Build and Test') {
+                    steps {
+                        sh 'mvn clean test -Dtest=ParalelProgramlamaLoginTests'
+                    }
+                }
             }
         }
-    }
-}
-*************************************************************************************
-"Save" butonuna tıklayarak projeyi kaydedin.
-Jenkins ana sayfasındaki "MyJavaPipeline" projesine tıklayarak, proje sayfasına gidin.
-"Build Now" butonuna tıklayarak projeyi çalıştırın.
-Testlerinizin başarıyla koştuğundan emin olmak için, proje sayfasındaki "Console Output" bölümüne bakabilirsiniz.
+        *************************************************************************************
+    "Save" butonuna tıklayarak projeyi kaydedin.
+    Jenkins ana sayfasındaki "MyJavaPipeline" projesine tıklayarak, proje sayfasına gidin.
+    "Build Now" butonuna tıklayarak projeyi çalıştırın.
+    Testlerinizin başarıyla koştuğundan emin olmak için, proje sayfasındaki "Console Output" bölümüne bakabilirsiniz.
 
 Katkıda Bulunma
 
-Bu projeye katkıda bulunmak için lütfen pull request gönderin.
+    Bu projeye katkıda bulunmak için lütfen pull request gönderin.
 Lisans
 
-Bu proje MIT lisansı altında lisanslanmıştır. Detaylı bilgi için LICENSE dosyasına bakabilirsiniz.
+    Bu proje MIT lisansı altında lisanslanmıştır. Detaylı bilgi için LICENSE dosyasına bakabilirsiniz.
