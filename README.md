@@ -37,7 +37,7 @@ Jenkins Entegrasyonu
         pipeline {
         agent any
         triggers {
-            cron('00 17 * * 3')
+            cron('00 17 * * 3') // cron ifadesi "00 17 * * 3" dakika 00, saat 17:00, her ayın her günü ve haftanın 3. günü (çarşamba) anlamına gelir.
         }
         stages {
             stage('Checkout') {
@@ -56,7 +56,7 @@ Jenkins Entegrasyonu
         pipeline {
             agent any
             triggers {
-                cron('00 15 * * 4')
+                cron('00 15 * * 4') // cron ifadesi "00 15 * * 4" dakika 00, saat 15:00, her ayın her günü ve haftanın 4. günü (perşembe) anlamına gelir.
             }
             stages {
                 stage('Checkout') {
