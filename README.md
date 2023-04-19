@@ -72,6 +72,7 @@ Jenkins Entegrasyonu
             }
         }
         *************************************************************************************
+        
     "Save" butonuna tıklayarak projeyi kaydedin.
     Jenkins ana sayfasındaki "MyJavaPipeline" projesine tıklayarak, proje sayfasına gidin.
     "Build Now" butonuna tıklayarak projeyi çalıştırın.
