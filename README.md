@@ -24,6 +24,10 @@ Kullanım
 
 Jenkins Entegrasyonu
 
+    Jenkins entegrasyonumuzu pipeline şekilde kuruyoruz çünkü:
+    Aynı proje altında birden fazla derslerimiz var ve hepsinin saatleri ve günleri farklı tek bir proje altındaki testleri
+    farklı zamanlarda koşturabilmek için pipeline kullanıyoruz.
+
     Jenkins ana sayfasına giriş yapın ve "New Item" seçeneğine tıklayın.
     Açılan sayfada "item name" alanına "MyJavaPipeline" yazın ve "Pipeline" seçeneğini seçin, ardından "OK" butonuna tıklayın.
     Açılan sayfada "Pipeline" bölümünü bulun ve "Definition" seçeneğini "Pipeline script" olarak ayarlayın.
