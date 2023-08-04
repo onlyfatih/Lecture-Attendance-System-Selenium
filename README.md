@@ -1,6 +1,10 @@
 # Ders Takip Sistemi Test Otomasyonu
 Bu proje, üniversitenin uzaktan eğitim sistemine otomatik olarak giriş yaparak ders saatlerinde kamera ve mikrofonu kapattıktan sonra derse bağlanıp 1 saat sonra dersten otomatik olarak çıkışını yapmanızı sağlar. Jenkins ile ayarladığınız gün ve saatlerde otomatik olarak çalışır.
 
+<p align="center">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Konya_Teknik_%C3%9Cniversitesi_logo.svg/1024px-Konya_Teknik_%C3%9Cniversitesi_logo.svg.png" alt="Proje Logo" width="300" />
+</p>
+
 Gereksinimler
 
 Projenin çalışması için aşağıdaki programlara ihtiyaç duyulmaktadır:
