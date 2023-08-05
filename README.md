@@ -79,10 +79,10 @@ groovy
         }
     }
 
-    Click the "Save" button to save the project.
-    Click on the "MyJavaPipeline" project in the Jenkins dashboard to go to the project page.
-    Click the "Build Now" button to run the project.
-    To ensure that your tests have run successfully, you can check the "Console Output" section on the project page.
+1- Click the "Save" button to save the project.
+2- Click on the "MyJavaPipeline" project in the Jenkins dashboard to go to the project page.
+3- Click the "Build Now" button to run the project.
+4- To ensure that your tests have run successfully, you can check the "Console Output" section on the project page.
 
 Contribution
 
