@@ -41,43 +41,43 @@ Here are the steps for Jenkins integration:
 
 groovy
 
-pipeline {
-    agent any
-    triggers {
-        cron('00 17 * * 3') // cron expression "00 17 * * 3" means at minute 00, hour 17:00, every day of the month, and every Wednesday (day of the week).
-    }
-    stages {
-        stage('Checkout') {
-            steps {
-                git branch: 'main', url: 'https://github.com/onlyfatih/DersTakipSistemiTestOtomasyonu.git'
-            }
+    pipeline {
+        agent any
+        triggers {
+            cron('00 17 * * 3') // cron expression "00 17 * * 3" means at minute 00, hour 17:00, every day of the month, and every Wednesday (day of       the week).
         }
-        stage('Build and Test') {
-            steps {
-                sh 'mvn clean test -Dtest=AlgoritmaAnaliziLoginTests'
+        stages {
+            stage('Checkout') {
+                steps {
+                    git branch: 'main', url: 'https://github.com/onlyfatih/DersTakipSistemiTestOtomasyonu.git'
+                }
             }
-        }
-    }
-}
-
-pipeline {
-    agent any
-    triggers {
-        cron('00 15 * * 4') // cron expression "00 15 * * 4" means at minute 00, hour 15:00, every day of the month, and every Thursday (day of the week).
-    }
-    stages {
-        stage('Checkout') {
-            steps {
-                git branch: 'main', url: 'https://github.com/onlyfatih/DersTakipSistemiTestOtomasyonu.git'
-            }
-        }
-        stage('Build and Test') {
-            steps {
-                sh 'mvn clean test -Dtest=ParalelProgramlamaLoginTests'
+            stage('Build and Test') {
+                steps {
+                    sh 'mvn clean test -Dtest=AlgoritmaAnaliziLoginTests'
+                }
             }
         }
     }
-}
+    
+    pipeline {
+        agent any
+        triggers {
+            cron('00 15 * * 4') // cron expression "00 15 * * 4" means at minute 00, hour 15:00, every day of the month, and every Thursday (day of     the week).
+        }
+        stages {
+            stage('Checkout') {
+                steps {
+                    git branch: 'main', url: 'https://github.com/onlyfatih/DersTakipSistemiTestOtomasyonu.git'
+                }
+            }
+            stage('Build and Test') {
+                steps {
+                    sh 'mvn clean test -Dtest=ParalelProgramlamaLoginTests'
+                }
+            }
+        }
+    }
 
     Click the "Save" button to save the project.
     Click on the "MyJavaPipeline" project in the Jenkins dashboard to go to the project page.
